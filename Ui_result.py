@@ -238,7 +238,6 @@ class ResultWindow(object):
         self.twgLoad_()
 
         self.dis_cmb_txt()
-        self.twg_data()
 
 ############# ปิด ปุ่ม ##############
         self.btnAdd.setEnabled(True)
@@ -347,14 +346,5 @@ class ResultWindow(object):
             for j,val in enumerate(row):       
                 self.tableWidget.setItem(i, j,QtWidgets.QTableWidgetItem(str(val)))
     
-    def twg_data(self):
-        row = int(self.tableWidget.rowCount())
-        x = []
-        print(row)
-        i = 0
-        while i<row:
-            x.append(self.tableWidget.item(i,0).text())
-            i+=1
-        print(x)
             
             
